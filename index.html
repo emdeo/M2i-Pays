@@ -25,13 +25,13 @@
         <form action="/action_page.php" class="form-horizontal" method="post">
             <div class="form-group row">
 
-                <label for="txtPays" class="col-sm-2">Entrez un pays</label>
-                <div class="col-sm-3">
+                <label for="txtPays" class="col-md-2">Entrez un pays</label>
+                <div class="col-md-3">
                     <input type="text" class="form-control" id="txtPays" name="txtPays" placeholder="Un pays">
                 </div>
 
                 <!-- On ajoute le pays à la liste quand l'utilisateur appuie sur le bouton -->
-                <button id="monBouton" class="btn btn-block btn-outline-primary col-sm-2" onclick="Traitement()">
+                <button id="monBouton" class="btn btn-block btn-outline-primary col-md-2" onclick="Traitement()">
                     Ajouter pays
                 </button>
 
@@ -42,26 +42,32 @@
         <br />
 
         <!-- Affichage des pays (vide au départ) -->
-        <textarea id="txtAreaPays" rows="10" class="col-sm-7"></textarea>
+        <div class="form-group row">
+            <label for="txtPays" class="col-md-2">Liste des pays</label>
+            <textarea id="txtAreaPays" rows="10" class="col-md-3"></textarea>
+        </div>
 
         <!-- Saut de ligne -->
         <br />
 
         <!-- Afficher une liste déroulante des pays déjà créés -->
-        <select id="selectPays" class="form-group row col-sm-7" onchange="UpdatePlaceholder(this)">
-        </select>
+        <div class="form-group row">
+            <label for="txtPays" class="col-md-2">Liste des pays</label>
+            <select id="selectPays" class="form-group row col-md-3" onchange="UpdateValue(this)">
+            </select>
+        </div>
 
 
         <form action="/action_page.php" class="form-horizontal" method="post">
             <div class="form-group row">
 
-                <label for="txtNewPays" class="col-sm-2">Pays sélectionné</label>
-                <div class="col-sm-3">
+                <label for="txtNewPays" class="col-md-2">Pays sélectionné</label>
+                <div class="col-md-3">
                     <input type="text" class="form-control" id="txtNewPays" name="txtNewPays">
                 </div>
 
                 <!-- On ajoute le pays à la liste quand l'utilisateur appuie sur le bouton -->
-                <button id="monBouton" class="btn btn-block btn-outline-primary col-sm-2" onclick="ModifierPays()">
+                <button id="monBouton" class="btn btn-block btn-outline-primary col-md-2" onclick="ModifierPays()">
                     Modifier le pays
                 </button>
 
@@ -71,22 +77,22 @@
     </div>
 
     <script>
-        let t = []
+        let tableauPays = []
 
         function Traitement() {
             var newPays = document.getElementById("txtPays").value // récupérer le nouveau pays
             newPays = newPays.toUpperCase() // convertir le nom de pays en majuscules
 
             // Vérifier si le nouveau pays est déjà dans la liste
-            if (t.indexOf(newPays) == -1) { // équivaut à t.includes(newPays) == false
-                t.push(newPays) // ajouter le nouveau pays au tableau
+            if (tableauPays.indexOf(newPays) == -1) { // équivaut à t.includes(newPays) == false
+                tableauPays.push(newPays) // ajouter le nouveau pays au tableau
                 AjoutPays(newPays, document.getElementById("selectPays"))
             }
             else {
                 alert("Ce pays a déjà été entré")
             }
 
-            document.getElementById("txtAreaPays").value = t.join("\n") // afficher le tableau dans le TextArea (éléments séparés par un saut de ligne "\n")
+            document.getElementById("txtAreaPays").value = tableauPays.join("\n") // afficher le tableau dans le TextArea (éléments séparés par un saut de ligne "\n")
             // .innerHTML permet de modifier le contenu stocké entre 2 balises. On peut identifier ces balises grâce à l'id
         }
 
@@ -101,7 +107,7 @@
 
 
 
-        function UpdatePlaceholder(selection) {
+        function UpdateValue(selection) {
             document.getElementById("txtNewPays").value = selection.value
         }
 
@@ -111,15 +117,14 @@
             var oldPays = document.getElementById("selectPays").value
             var newPays = document.getElementById("txtNewPays").value.toUpperCase()
 
-            if (t.indexOf(newPays) == -1) {
-                t[t.indexOf(oldPays)] = newPays
+            if (tableauPays.indexOf(newPays) == -1) {
+                tableauPays[tableauPays.indexOf(oldPays)] = newPays
+                document.getElementById("txtAreaPays").value = tableauPays.join("\n")
                 // alert("Remplacement exécuté")
             }
             else {
                 // alert("Ce pays est déjà dans la liste, remplacement impossible")
             }
-
-            document.getElementById("txtAreaPays").value = t.join("\n")
         }
     </script>
 </body>
