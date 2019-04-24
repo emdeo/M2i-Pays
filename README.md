@@ -6,8 +6,8 @@ Enregistrer un entrée de texte dans un tableau (array). Afficher le contenu de 
 1. [Introduction](#introduction)
 2. [Body](#body)
     1. [Conteneur](#conteneur)
-    2. [BODY Formulaire](#body-formulaire)
-    3. [Entrer](#entrer)
+    2. [Formulaire](#formulaire)
+    3. [Entrer un pays](#entrer-un-pays)
     4. [Afficher](#afficher)
     5. [Selectionner](#selectionner)
 3. [Sources](#sources)
@@ -48,7 +48,7 @@ On demande à l'utilisateur d'entrer un pays. On veut que nos éléments soient 
         ...
     </div>
 
-### <a href="entrer">Entrer</a>
+### <a href="entrer-un-pays">Entrer un pays</a>
 
 Afficher un **label**, un **input** et un **button** sur la même ligne. Le bouton lance la fonction **Traitement()** quand il est cliqué.
 
