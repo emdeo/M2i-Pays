@@ -7,12 +7,12 @@ Enregistrer un entrée de texte dans un tableau (array). Afficher le contenu de 
 2. [Conteneur](#conteneur)
 3. [Formulaire](#formulaire)
 4. [Entrer](#entrer)
-5. [Afficher le tableau](#affiche)
-6. [Sélectionner un pays](#select)
+5. [Afficher](#afficher)
+6. [Selectionner](#select)
 7. [Traitement()](#traitement)
-8. [Ajouter un pays](#ajoutPays)
-9. [Mettre à jour la valeur d'un élément](#update)
-10. [Modifier un pays de la liste](#modifier)
+8. [Ajouter](#ajoutPays)
+9. [Update](#update)
+10. [Modifier](#modifier)
 
 ## <a href="references">References</a>
 
@@ -60,7 +60,7 @@ Afficher un **label**, un **input** et un **button** sur la même ligne. Le bout
         Ajouter pays
     </button>
 
-## <a href="affiche">Afficher le tableau</a>
+## <a href="afficher">Afficher</a>
 
 On affiche la liste dans un **textarea**. Cet élément est vide au départ, on se contente de définir son **id** et ses dimensions.
 
@@ -76,7 +76,7 @@ On affiche la liste dans un **textarea**. Cet élément est vide au départ, on 
 
     </div>
 
-## <a href="select">Sélectionner un pays</a>
+## <a href="select">Selectionner</a>
 
 Afficher une liste déroulante des pays stockés dans le tableau (le paramètre **onchange** est utilisé plus tard pour afficher l'option sélection dans un **input** situé plus bas) :
 
@@ -125,7 +125,7 @@ La fonction Traitement() fonctionne en quatre étapes.
         document.getElementById("txtAreaPays").value = tableauPays.join("\n")
     }
 
-## <a href="ajoutPays">Ajouter un pays</a>
+## <a href="ajoutPays">Ajouter</a>
 
 La fonction **AjoutPays()** permet de créer une balise **option** (*document.createElement("option")*) imbriquée dans la balise **select** (*listeVisuelle.appendChild(option1)*) quand l'utilisateur entre un nouveau pays.
 
@@ -141,7 +141,7 @@ La fonction définit la valeur, l'id et le contenu (**.innerHTML**) de la nouvel
         listeVisuelle.appendChild(option1)
     }
 
-## <a href="update">Mettre à jour la valeur d'un élément</a>
+## <a href="update">Update</a>
 
 L'élément **select** permet de sélectionner, dans le tableau, un pays que l'on veut modifier. Le nom de ce pays sera affiché par défaut dans l'élément **input** dans lequel l'utilisateur entrera le nouveau nom de pays.
 
@@ -151,7 +151,7 @@ La fonction **UpdateValue(selection)** permet de modifier le contenu de cet él�
         document.getElementById("txtNewPays").value = selection.value
     }
 
-## <a href="modifier">Modifier un pays de la liste</a>
+## <a href="modifier">Modifier</a>
 
 La fonction **ModifierPays()** permet à l'utilisateur de remplacer un pays de la liste par un nouveau nom de pays. Cette fonction enregistre les noms du pays sélectionné et du pays qui doit le remplacer.
 
