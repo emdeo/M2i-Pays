@@ -12,7 +12,7 @@ Enregistrer un entrée de texte dans un tableau. Afficher le contenu de ce table
 
 Tutos rapides en JavaScript sur le site <a href="https://www.w3schools.com/xml/default.asp" target="_blank">W3Schools</a>.
 
-## <a href="conteneur">Body - Conteneur</a>
+## <a href="conteneur">Conteneur (Body)</a>
 
 Pour centrer le contenu de la page, il faut imbriquer nos balises dans un **div** de classe **.container**.
 
@@ -20,7 +20,7 @@ Pour centrer le contenu de la page, il faut imbriquer nos balises dans un **div*
         ...
     </div>
 
-## <a href="formulaire">Body - Formulaire</a>
+## <a href="formulaire">Formulaire (Body)</a>
 
 Tous les élements de la page qui envoient des données sont imbriqués dans un élément **form** dont l'attribut **action** définit l'action à accomplir quand l'utilisateur a remplis le formulaire.
 
