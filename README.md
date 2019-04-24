@@ -6,7 +6,7 @@ Enregistrer un entrée de texte dans un tableau (array). Afficher le contenu de 
 1. [Références](#references)
 2. [Conteneur](#conteneur)
 3. [Formulaire](#formulaire)
-4. [Entrer un pays](#entrees)
+4. [Entrer_un_pays](#entrees)
 5. [Afficher le tableau](#affiche)
 6. [Sélectionner un pays](#select)
 7. [Traitement()](#traitement)
