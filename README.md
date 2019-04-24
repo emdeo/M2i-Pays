@@ -5,7 +5,7 @@ Enregistrer un entrée de texte dans un tableau (array). Afficher le contenu de 
 ## Table des matières
 1. [Références](#références)
 2. [Conteneur](#conteneur)
-3. [Formulaire](#formulaire)
+3. [Formulaire (body)](#formulaire-(body))
 4. [Entrer](#entrer)
 5. [Afficher](#afficher)
 6. [Selectionner](#selectionner)
