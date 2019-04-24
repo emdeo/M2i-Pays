@@ -8,7 +8,7 @@ Enregistrer un entrée de texte dans un tableau (array). Afficher le contenu de 
     1. [Conteneur](#conteneur)
     2. [Formulaire](#formulaire)
     3. [Entrer un pays](#entrer-un-pays)
-    4. [Afficher le tableau](#afficher-tableau)
+    4. [Afficher le tableau](#afficher-le-tableau)
     5. [Selectionner un pays](#selectionner-pays)
 3. [Sources](#sources)
     1. [Traitement()](#traitement)
@@ -64,7 +64,7 @@ Afficher un **label**, un **input** et un **button** sur la même ligne. Le bout
         Ajouter pays
     </button>
 
-### <a href="afficher-tableau">Afficher le tableau</a>
+### <a href="afficher-le-tableau">Afficher le tableau</a>
 
 On affiche la liste dans un **textarea**. Cet élément est vide au départ, on se contente de définir son **id** et ses dimensions.
 
