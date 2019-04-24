@@ -5,15 +5,18 @@ Enregistrer un entrée de texte dans un tableau. Afficher le contenu de ce table
 ## Table des matières
 1. [Ressources](#ressources)
 2. [Body](#body)
+
 2.1. [Conteneur](#conteneur)
+
 2.2. [Formulaire](#formulaire)
+
 3. [Sources](#sources)
 
 ## <a href="ressources">Ressources</a>
 
 Tutos rapides en JavaScript sur le site <a href="https://www.w3schools.com/xml/default.asp" target="_blank">W3Schools</a>.
 
-### <a href="body">Body</a>
+## <a href="body">Body</a>
 
 ### <a href="conteneur">Conteneur</a>
 
