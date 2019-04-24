@@ -48,20 +48,3 @@ function ModifierPays() {
         // alert("Ce pays est déjà dans la liste, remplacement impossible")
     }
 }
-
-// function Traitement() {
-//     var newPays = document.getElementById("txtPays").value // récupérer le nouveau pays
-//     newPays = newPays.toUpperCase() // convertir le nom de pays en majuscules
-
-//     // Vérifier si le nouveau pays est déjà dans la liste
-    // if (tableauPays.indexOf(newPays) == -1) { // équivaut à t.includes(newPays) == false
-    //     tableauPays.push(newPays) // ajouter le nouveau pays au tableau
-    //     AjoutPays(newPays, document.getElementById("selectPays"))
-    // }
-    // else {
-    //     alert("Ce pays a déjà été entré")
-    // }
-
-    // document.getElementById("txtAreaPays").value = tableauPays.join("\n") // afficher le tableau dans le TextArea (éléments séparés par un saut de ligne "\n")
-    // .innerHTML permet de modifier le contenu stocké entre 2 balises. On peut identifier ces balises grâce à l'id
-// }
