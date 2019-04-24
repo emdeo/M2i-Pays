@@ -12,7 +12,7 @@ Enregistrer un entrée de texte dans un tableau (array). Afficher le contenu de 
     5. [Selectionner un pays](#selectionner-un-pays)
 3. [Sources](#sources)
     1. [Traitement()](#traitement)
-    2. [Ajouter](#ajouter)
+    2. [Ajouter un pays](#ajouter-un-pays)
     3. [Update](#update)
     4. [Modifier](#modifier)
 
@@ -131,7 +131,7 @@ La fonction Traitement() fonctionne en quatre étapes.
         document.getElementById("txtAreaPays").value = tableauPays.join("\n")
     }
 
-### <a href="ajoutPays">Ajouter</a>
+### <a href="ajouter-un-pays">Ajouter un pays</a>
 
 La fonction **AjoutPays()** permet de créer une balise **option** (*document.createElement("option")*) imbriquée dans la balise **select** (*listeVisuelle.appendChild(option1)*) quand l'utilisateur entre un nouveau pays.
 
