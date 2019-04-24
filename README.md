@@ -3,7 +3,7 @@
 Enregistrer un entrée de texte dans un tableau (array). Afficher le contenu de ce tableau dans un TextArea et dans un menu déroulant.
 
 ## Table des matières
-1. [References](#references)
+1. [Références](#références)
 2. [Conteneur](#conteneur)
 3. [Formulaire](#formulaire)
 4. [Entrer](#entrer)
@@ -14,7 +14,7 @@ Enregistrer un entrée de texte dans un tableau (array). Afficher le contenu de 
 9. [Update](#update)
 10. [Modifier](#modifier)
 
-## <a href="references">References</a>
+## <a href="références">Références</a>
 
 Tutos rapides W3Schools sur <a href="https://www.w3schools.com/js/js_arrays.asp">les arrays (tableaux)</a> et <a href="https://www.w3schools.com/jquery/">JQuery</a>.
 
