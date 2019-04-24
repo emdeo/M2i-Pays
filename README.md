@@ -8,8 +8,8 @@ Enregistrer un entrée de texte dans un tableau (array). Afficher le contenu de 
     1. [Conteneur](#conteneur)
     2. [Formulaire](#formulaire)
     3. [Entrer un pays](#entrer-un-pays)
-    4. [Afficher](#afficher)
-    5. [Selectionner](#selectionner)
+    4. [Afficher le tableau](#afficher-tableau)
+    5. [Selectionner un pays](#selectionner-pays)
 3. [Sources](#sources)
     1. [Traitement()](#traitement)
     2. [Ajouter](#ajouter)
@@ -64,7 +64,7 @@ Afficher un **label**, un **input** et un **button** sur la même ligne. Le bout
         Ajouter pays
     </button>
 
-### <a href="afficher">Afficher</a>
+### <a href="afficher-tableau">Afficher le tableau</a>
 
 On affiche la liste dans un **textarea**. Cet élément est vide au départ, on se contente de définir son **id** et ses dimensions.
 
@@ -80,7 +80,7 @@ On affiche la liste dans un **textarea**. Cet élément est vide au départ, on 
 
     </div>
 
-### <a href="selectionner">Selectionner</a>
+### <a href="selectionner-pays">Selectionner un pays</a>
 
 Afficher une liste déroulante des pays stockés dans le tableau (le paramètre **onchange** est utilisé plus tard pour afficher l'option sélection dans un **input** situé plus bas) :
 
