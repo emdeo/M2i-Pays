@@ -4,20 +4,26 @@ Enregistrer un entrée de texte dans un tableau. Afficher le contenu de ce table
 
 ## Table des matières
 1. [Ressources](#ressources)
-2. [Body](#body)
-3. [Sources](#sources)
+2. [Body - conteneur](#body-cont)
+3. [Body - formulaire](#body-form)
+4. [Body - entrées](#body-ent)
+5. [Body - afficher la liste](#body-aff)
+6. [Body - selecteur](#body-sel)
+7. [Sources](#sources)
 
 ## <a href="ressources">Ressources</a>
 
 Tutos rapides en JavaScript sur le site <a href="https://www.w3schools.com/xml/default.asp" target="_blank">W3Schools</a>.
 
-## <a href="body">Body</a>
+## <a href="body-cont">Body - conteneur</a>
 
 Pour centrer le contenu de la page, il faut imbriquer nos balises dans un **div** de classe **.container**.
 
     <div class="container">
         ...
     </div>
+
+## <a href="body-form">Body - formulaire</a>
 
 Tous les élements de la page qui envoient des données sont imbriqués dans un élément **form** dont l'attribut **action** définit l'action à accomplir quand l'utilisateur a remplis le formulaire.
 
@@ -28,6 +34,8 @@ En temps normal, les données du formulaire sont transmises à une page web héb
     <form action="/action_page.php" class="form-horizontal" method="post">
         ...
     </form>
+
+## <a href="body-ent">Body - entrées</a>
 
 On demande à l'utilisateur d'entrer un pays. On veut que nos éléments soient sur la même ligne. Nos balises doivent être imbriquées dans un **div** de classes "**.form-group**" et "**.row**" :
 
@@ -49,6 +57,8 @@ Afficher un **label**, un **input** et un **button** sur la même ligne. Le bout
         Ajouter pays
     </button>
 
+## <a href="body-aff">Body - afficher la liste</a>
+
 On affiche la liste dans un **textarea**. Cet élément est vide au départ, on se contente de définir son **id** et ses dimensions.
 
     <div class="form-group row">
@@ -62,6 +72,8 @@ On affiche la liste dans un **textarea**. Cet élément est vide au départ, on 
         </div>
 
     </div>
+
+## <a href="body-sel">Body - selecteur</a>
 
 Afficher une liste déroulante des pays stockés dans le tableau (le paramètre **onchange** est utilisé plus tard pour afficher l'option sélection dans un **input** situé plus bas) :
 
