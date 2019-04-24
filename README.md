@@ -3,7 +3,7 @@
 Enregistrer un entrée de texte dans un tableau (array). Afficher le contenu de ce tableau dans un TextArea et dans un menu déroulant.
 
 ## Table des matières
-1. [Introduction](#introduction)
+1. [Références](#références)
 2. [Body](#body)
     1. [Conteneur](#conteneur)
     2. [Formulaire](#formulaire)
@@ -13,7 +13,7 @@ Enregistrer un entrée de texte dans un tableau (array). Afficher le contenu de 
 3. [Sources](#sources)
     1. [Traitement()](#traitement)
     2. [Ajouter un pays](#ajouter-un-pays)
-    3. [Mettre à jour les options](#mettre-a-jour-les-options)
+    3. [Mettre à jour les options](#mettre-à-jour-les-options)
     4. [Modifier un pays](#modifier-un-pays)
 
 ## <a href="références">Références</a>
@@ -147,7 +147,7 @@ La fonction définit la valeur, l'id et le contenu (**.innerHTML**) de la nouvel
         listeVisuelle.appendChild(option1)
     }
 
-### <a href="mettre-a-jour-les-options">Mettre à jour les options</a>
+### <a href="mettre-à-jour-les-options">Mettre à jour les options</a>
 
 L'élément **select** permet de sélectionner, dans le tableau, un pays que l'on veut modifier. Le nom de ce pays sera affiché par défaut dans l'élément **input** dans lequel l'utilisateur entrera le nouveau nom de pays.
 
