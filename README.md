@@ -6,7 +6,7 @@ Enregistrer un entrée de texte dans un tableau (array). Afficher le contenu de 
 1. [References](#references)
 2. [Conteneur](#conteneur)
 3. [Formulaire](#formulaire)
-4. [Entrees](#entrees)
+4. [Entrer](#entrer)
 5. [Afficher le tableau](#affiche)
 6. [Sélectionner un pays](#select)
 7. [Traitement()](#traitement)
@@ -44,7 +44,7 @@ On demande à l'utilisateur d'entrer un pays. On veut que nos éléments soient 
         ...
     </div>
 
-## <a href="entrees">Entrer</a>
+## <a href="entrer">Entrer</a>
 
 Afficher un **label**, un **input** et un **button** sur la même ligne. Le bouton lance la fonction **Traitement()** quand il est cliqué.
 
