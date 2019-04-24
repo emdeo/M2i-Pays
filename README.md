@@ -8,9 +8,9 @@ Enregistrer un entrée de texte dans un tableau (array). Afficher le contenu de 
 3. [Formulaire](#formulaire)
 4. [Entrer](#entrer)
 5. [Afficher](#afficher)
-6. [Selectionner](#select)
+6. [Selectionner](#selectionner)
 7. [Traitement()](#traitement)
-8. [Ajouter](#ajoutPays)
+8. [Ajouter](#ajouter)
 9. [Update](#update)
 10. [Modifier](#modifier)
 
@@ -76,7 +76,7 @@ On affiche la liste dans un **textarea**. Cet élément est vide au départ, on 
 
     </div>
 
-## <a href="select">Selectionner</a>
+## <a href="selectionner">Selectionner</a>
 
 Afficher une liste déroulante des pays stockés dans le tableau (le paramètre **onchange** est utilisé plus tard pour afficher l'option sélection dans un **input** situé plus bas) :
 
