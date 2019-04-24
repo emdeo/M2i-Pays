@@ -44,7 +44,7 @@ On demande à l'utilisateur d'entrer un pays. On veut que nos éléments soient 
         ...
     </div>
 
-## <a href="entrees">Entrer_un_pays</a>
+## <a href="entrees">Entrees</a>
 
 Afficher un **label**, un **input** et un **button** sur la même ligne. Le bouton lance la fonction **Traitement()** quand il est cliqué.
 
