@@ -9,7 +9,7 @@ Enregistrer un entrée de texte dans un tableau (array). Afficher le contenu de 
     2. [Formulaire](#formulaire)
     3. [Entrer un pays](#entrer-un-pays)
     4. [Afficher le tableau](#afficher-le-tableau)
-    5. [Selectionner un pays](#selectionner-pays)
+    5. [Selectionner un pays](#selectionner-un-pays)
 3. [Sources](#sources)
     1. [Traitement()](#traitement)
     2. [Ajouter](#ajouter)
@@ -80,7 +80,7 @@ On affiche la liste dans un **textarea**. Cet élément est vide au départ, on 
 
     </div>
 
-### <a href="selectionner-pays">Selectionner un pays</a>
+### <a href="selectionner-un-pays">Selectionner un pays</a>
 
 Afficher une liste déroulante des pays stockés dans le tableau (le paramètre **onchange** est utilisé plus tard pour afficher l'option sélection dans un **input** situé plus bas) :
 
