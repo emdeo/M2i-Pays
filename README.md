@@ -4,7 +4,8 @@ Enregistrer un entrée de texte dans un tableau. Afficher le contenu de ce table
 
 ## Table des matières
 1. [Ressources](#ressources)
-2. [Body](#body)
+2. [Body - Conteneur](#conteneur)
+3. [Body - Formulaire](#formulaire)
 3. [Sources](#sources)
 
 ## <a href="ressources">Ressources</a>
