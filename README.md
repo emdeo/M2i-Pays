@@ -5,7 +5,7 @@ Enregistrer un entrée de texte dans un tableau. Afficher le contenu de ce table
 ## Table des matières
 1. [Ressources](#ressources)
 2. [Body](#body)
-3. [Scripts](#scripts)
+3. [Sources](#sources)
 
 ## <a href="ressources">Ressources</a>
 
@@ -19,37 +19,67 @@ Pour centrer le contenu de la page, il faut imbriquer nos balises dans un **div*
         ...
     </div>
 
-On demande à l'utilisateur d'entrer un pays. On veut que nos éléments soient sur la même ligne. Nos balises doivent être imbriquées dans un **form** de méthode **post**, puis dans un **div** de classe **.form-group .row** :
+Tous les élements de la page qui envoient des données sont imbriqués dans un élément **form** dont l'attribut **action** définit l'action à accomplir quand l'utilisateur a remplis le formulaire.
+
+En temps normal, les données du formulaire sont transmises à une page web hébergée sur le serveur dès que l'utilisateur clique sur le bouton d'envoie.
+
+*Cet élément **form** peut englober l'intégralité de la page*.
 
     <form action="/action_page.php" class="form-horizontal" method="post">
-        <div class="form-group row">
-            ...
-        </div>
+        ...
     </form>
+
+On demande à l'utilisateur d'entrer un pays. On veut que nos éléments soient sur la même ligne. Nos balises doivent être imbriquées dans un **div** de classes "**.form-group**" et "**.row**" :
+
+    <div class="form-group row">
+        ...
+    </div>
 
 Afficher un **label**, un **input** et un **button** sur la même ligne. Le bouton lance la fonction **Traitement()** quand il est cliqué.
 
-    <label for="txtPays" class="col-sm-2">Entrez un pays</label>
-    
-    <div class="col-sm-3">
+    <label for="txtPays" class="col-md-2">
+        Entrez un pays
+    </label>
+
+    <div class="col-md-3">
         <input type="text" class="form-control" id="txtPays" name="txtPays" placeholder="Un pays">
     </div>
-    
-    <button id="monBouton" class="btn btn-block btn-outline-primary col-sm-2" onclick="Traitement()">
+
+    <button id="monBouton" class="btn btn-block btn-outline-primary col-md-2" onclick="Traitement()">
         Ajouter pays
     </button>
 
-On affiche la liste dans un TextArea. Cet élément est vide au départ, on se contente de définir son **id** et ses dimensions.
+On affiche la liste dans un **textarea**. Cet élément est vide au départ, on se contente de définir son **id** et ses dimensions.
 
-    <textarea id="txtAreaPays" rows="10" class="col-sm-7">
-    </textarea>
+    <div class="form-group row">
+
+        <label for="txtPays" class="col-md-2">
+            Liste des pays
+        </label>
+        
+        <div class="col-md-3">
+            <textarea id="txtAreaPays" rows="6" class="form-control"></textarea>
+        </div>
+
+    </div>
 
 Afficher une liste déroulante des pays stockés dans le tableau (le paramètre **onchange** est utilisé plus tard pour afficher l'option sélection dans un **input** situé plus bas) :
 
-    <select id="selectPays" class="form-group row col-sm-7" onchange="UpdateValue(this)">
-    </select>
+    <div class="form-group row">
 
-## <a href="scripts">Scripts</a>
+        <label for="txtPays" class="col-md-2">
+            Liste des pays
+        </label>
+
+        <div class="col-md-3">
+            <select id="selectPays" class="form-control" onchange="UpdateValue(this)">
+                <option></option>
+            </select>
+        </div>
+
+    </div>
+
+## <a href="sources">Sources</a>
 
 On crée un tableau vide :
 
@@ -84,9 +114,12 @@ La fonction **AjoutPays()** permet de créer une balise **option** (*document.cr
 
 Cette fonction prend en paramètres le nom du nouveau pays et l'élément **select** de la page (*listeVisuelle*).
 
+La fonction définit la valeur, l'id et le contenu (**.innerHTML**) de la nouvelle balise option.
+
     function AjoutPays(pays, listeVisuelle) {
         var option1 = document.createElement("option")
         option1.value = pays
+        option1.id = pays
         option1.innerHTML = pays
         listeVisuelle.appendChild(option1)
     }
@@ -101,7 +134,7 @@ La fonction **UpdateValue(selection)** permet de modifier le contenu de cet él�
 
 La fonction **ModifierPays()** permet à l'utilisateur de remplacer un pays de la liste par un nouveau nom de pays. Cette fonction enregistre les noms du pays sélectionné et du pays qui doit le remplacer.
 
-Si le nouveau pays n'est pas dans la liste, on modifie le tableau en remplaçant l'ancienne valeur par la nouvelle. Enfin, on met à jour le **textarea** en affichant le tableau complet.
+Si le nouveau pays n'est pas dans la liste, on modifie le tableau en remplaçant l'ancienne valeur par la nouvelle. On met ensuite à jour le **textarea** en affichant le tableau complet. Enfin, on modifie l'élément **option** correpondant au pays qu'on a remplacé. 
 
     function ModifierPays() {
         var oldPays = document.getElementById("selectPays").value
@@ -110,5 +143,8 @@ Si le nouveau pays n'est pas dans la liste, on modifie le tableau en remplaçant
         if (tableauPays.indexOf(newPays) == -1) {
             tableauPays[tableauPays.indexOf(oldPays)] = newPays
             document.getElementById("txtAreaPays").value = tableauPaysjoin("\n")
+
+            document.getElementById(oldPays).value = newPays
+            document.getElementById(oldPays).innerHTML = newPays
         }
     }
