@@ -6,18 +6,15 @@ Enregistrer un entrée de texte dans un tableau (array). Afficher le contenu de 
 1. [Introduction](#introduction)
 2. [Body](#body)
     1. [Conteneur](#conteneur)
+    2. [BODY Formulaire](#body-formulaire)
+    3. [Entrer](#entrer)
+    4. [Afficher](#afficher)
+    5. [Selectionner](#selectionner)
 3. [Sources](#sources)
-
-1. [Références](#références)
-2. [Conteneur](#conteneur)
-3. [BODY Formulaire](#body-formulaire)
-4. [Entrer](#entrer)
-5. [Afficher](#afficher)
-6. [Selectionner](#selectionner)
-7. [Traitement()](#traitement)
-8. [Ajouter](#ajouter)
-9. [Update](#update)
-10. [Modifier](#modifier)
+    1. [Traitement()](#traitement)
+    2. [Ajouter](#ajouter)
+    3. [Update](#update)
+    4. [Modifier](#modifier)
 
 ## <a href="références">Références</a>
 
@@ -33,7 +30,7 @@ Pour centrer le contenu de la page, il faut imbriquer nos balises dans un **div*
         ...
     </div>
 
-## <a href="formulaire">Formulaire</a>
+### <a href="formulaire">Formulaire</a>
 
 Tous les élements de la page qui envoient des données sont imbriqués dans un élément **form** dont l'attribut **action** définit l'action à accomplir quand l'utilisateur a remplis le formulaire.
 
@@ -51,7 +48,7 @@ On demande à l'utilisateur d'entrer un pays. On veut que nos éléments soient 
         ...
     </div>
 
-## <a href="entrer">Entrer</a>
+### <a href="entrer">Entrer</a>
 
 Afficher un **label**, un **input** et un **button** sur la même ligne. Le bouton lance la fonction **Traitement()** quand il est cliqué.
 
@@ -67,7 +64,7 @@ Afficher un **label**, un **input** et un **button** sur la même ligne. Le bout
         Ajouter pays
     </button>
 
-## <a href="afficher">Afficher</a>
+### <a href="afficher">Afficher</a>
 
 On affiche la liste dans un **textarea**. Cet élément est vide au départ, on se contente de définir son **id** et ses dimensions.
 
@@ -83,7 +80,7 @@ On affiche la liste dans un **textarea**. Cet élément est vide au départ, on 
 
     </div>
 
-## <a href="selectionner">Selectionner</a>
+### <a href="selectionner">Selectionner</a>
 
 Afficher une liste déroulante des pays stockés dans le tableau (le paramètre **onchange** est utilisé plus tard pour afficher l'option sélection dans un **input** situé plus bas) :
 
