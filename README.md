@@ -13,8 +13,8 @@ Enregistrer un entrée de texte dans un tableau (array). Afficher le contenu de 
 3. [Sources](#sources)
     1. [Traitement()](#traitement)
     2. [Ajouter un pays](#ajouter-un-pays)
-    3. [Mettre à jour le select](#update)
-    4. [Modifier](#modifier)
+    3. [Mettre à jour les options](#mettre-a-jour-les-options)
+    4. [Modifier un pays](#modifier-un-pays)
 
 ## <a href="références">Références</a>
 
@@ -147,7 +147,7 @@ La fonction définit la valeur, l'id et le contenu (**.innerHTML**) de la nouvel
         listeVisuelle.appendChild(option1)
     }
 
-### <a href="update">Mettre à jour le select</a>
+### <a href="mettre-a-jour-les-options">Mettre à jour les options</a>
 
 L'élément **select** permet de sélectionner, dans le tableau, un pays que l'on veut modifier. Le nom de ce pays sera affiché par défaut dans l'élément **input** dans lequel l'utilisateur entrera le nouveau nom de pays.
 
@@ -157,7 +157,7 @@ La fonction **UpdateValue(selection)** permet de modifier le contenu de cet él�
         document.getElementById("txtNewPays").value = selection.value
     }
 
-### <a href="modifier">Modifier</a>
+### <a href="modifier-un-pays">Modifier un pays</a>
 
 La fonction **ModifierPays()** permet à l'utilisateur de remplacer un pays de la liste par un nouveau nom de pays. Cette fonction enregistre les noms du pays sélectionné et du pays qui doit le remplacer.
 
