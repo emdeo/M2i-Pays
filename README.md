@@ -1,24 +1,24 @@
 # README
 
-Enregistrer un entrée de texte dans un tableau. Afficher le contenu de ce tableau dans un TextArea est dans un menu déroulant.
+Enregistrer un entrée de texte dans un tableau (array). Afficher le contenu de ce tableau dans un TextArea et dans un menu déroulant.
 
 ## Table des matières
-1. [Ressources](#ressources)
-2. [Body](#body)
+1. [Références](#references)
+2. [Conteneur](#conteneur)
+3. [Formulaire](#formulaire)
+4. [Entrer un pays](#entrees)
+5. [Afficher le tableau](#affiche)
+6. [Sélectionner un pays](#select)
+7. [Traitement()](#traitement)
+8. [Ajouter un pays](#ajoutPays)
+9. [Mettre à jour la valeur d'un élément](#update)
+10. [Modifier un pays de la liste](#modifier)
 
-2.1. [Conteneur](#conteneur)
+## <a href="references">Références</a>
 
-2.2. [Formulaire](#formulaire)
+Tutos rapides W3Schools sur <a href="https://www.w3schools.com/js/js_arrays.asp">les arrays (tableaux)</a> et <a href="https://www.w3schools.com/jquery/">JQuery</a>.
 
-3. [Sources](#sources)
-
-## <a href="ressources">Ressources</a>
-
-Tutos rapides en JavaScript sur le site <a href="https://www.w3schools.com/xml/default.asp" target="_blank">W3Schools</a>.
-
-## <a href="body">Body</a>
-
-### <a href="conteneur">Conteneur</a>
+## <a href="conteneur">Conteneur</a>
 
 Pour centrer le contenu de la page, il faut imbriquer nos balises dans un **div** de classe **.container**.
 
@@ -26,7 +26,7 @@ Pour centrer le contenu de la page, il faut imbriquer nos balises dans un **div*
         ...
     </div>
 
-### <a href="formulaire">Formulaire</a>
+## <a href="formulaire">Formulaire</a>
 
 Tous les élements de la page qui envoient des données sont imbriqués dans un élément **form** dont l'attribut **action** définit l'action à accomplir quand l'utilisateur a remplis le formulaire.
 
@@ -44,6 +44,8 @@ On demande à l'utilisateur d'entrer un pays. On veut que nos éléments soient 
         ...
     </div>
 
+## <a href="entrees">Entrer un pays</a>
+
 Afficher un **label**, un **input** et un **button** sur la même ligne. Le bouton lance la fonction **Traitement()** quand il est cliqué.
 
     <label for="txtPays" class="col-md-2">
@@ -58,6 +60,8 @@ Afficher un **label**, un **input** et un **button** sur la même ligne. Le bout
         Ajouter pays
     </button>
 
+## <a href="affiche">Afficher le tableau</a>
+
 On affiche la liste dans un **textarea**. Cet élément est vide au départ, on se contente de définir son **id** et ses dimensions.
 
     <div class="form-group row">
@@ -71,6 +75,8 @@ On affiche la liste dans un **textarea**. Cet élément est vide au départ, on 
         </div>
 
     </div>
+
+## <a href="select">Sélectionner un pays</a>
 
 Afficher une liste déroulante des pays stockés dans le tableau (le paramètre **onchange** est utilisé plus tard pour afficher l'option sélection dans un **input** situé plus bas) :
 
@@ -88,7 +94,7 @@ Afficher une liste déroulante des pays stockés dans le tableau (le paramètre 
 
     </div>
 
-## <a href="sources">Sources</a>
+## <a href="traitement">Traitement()</a>
 
 On crée un tableau vide :
 
@@ -119,6 +125,8 @@ La fonction Traitement() fonctionne en quatre étapes.
         document.getElementById("txtAreaPays").value = tableauPays.join("\n")
     }
 
+## <a href="ajoutPays">Ajouter un pays</a>
+
 La fonction **AjoutPays()** permet de créer une balise **option** (*document.createElement("option")*) imbriquée dans la balise **select** (*listeVisuelle.appendChild(option1)*) quand l'utilisateur entre un nouveau pays.
 
 Cette fonction prend en paramètres le nom du nouveau pays et l'élément **select** de la page (*listeVisuelle*).
@@ -133,6 +141,8 @@ La fonction définit la valeur, l'id et le contenu (**.innerHTML**) de la nouvel
         listeVisuelle.appendChild(option1)
     }
 
+## <a href="update">Mettre à jour la valeur d'un élément</a>
+
 L'élément **select** permet de sélectionner, dans le tableau, un pays que l'on veut modifier. Le nom de ce pays sera affiché par défaut dans l'élément **input** dans lequel l'utilisateur entrera le nouveau nom de pays.
 
 La fonction **UpdateValue(selection)** permet de modifier le contenu de cet élément selon l'option choisie par l'utilisateur (attribut **onchange="UpdateValue(this)"**).
@@ -140,6 +150,8 @@ La fonction **UpdateValue(selection)** permet de modifier le contenu de cet él�
     function UpdateValue(selection) {
         document.getElementById("txtNewPays").value = selection.value
     }
+
+## <a href="modifier">Modifier un pays de la liste</a>
 
 La fonction **ModifierPays()** permet à l'utilisateur de remplacer un pays de la liste par un nouveau nom de pays. Cette fonction enregistre les noms du pays sélectionné et du pays qui doit le remplacer.
 
