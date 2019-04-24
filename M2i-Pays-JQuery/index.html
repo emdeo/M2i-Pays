@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Arrays (tableaux) JS</title>
+    <meta charset="UTF-8" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- Nécessaire pour centrer le contenu de la page -->
+    <div class="container">
+
+        <h2>Ajoutez les pays de votre choix</h2>
+
+        <!-- Saut de ligne -->
+        <br />
+
+        <!-- L'utilisateur entre un pays -->
+        <form action="/action_page.php" class="form-horizontal" method="post">
+            <div class="form-group row">
+
+                <label for="txtPays" class="col-md-2">Entrez un pays</label>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="txtPays" name="txtPays" placeholder="Un pays">
+                </div>
+
+                <!-- On ajoute le pays à la liste quand l'utilisateur appuie sur le bouton -->
+                <button id="btnAjouter" class="btn btn-block btn-outline-primary col-md-2">
+                    Ajouter pays
+                </button>
+
+            </div>
+
+
+            <!-- Saut de ligne -->
+            <br />
+
+
+
+            <!-- Affichage des pays (vide au départ) -->
+            <div class="form-group row">
+
+                <label for="txtPays" class="col-md-2">Liste des pays</label>
+                <div class="col-md-3">
+                    <textarea id="txtAreaPays" rows="6" class="form-control"></textarea>
+                </div>
+
+            </div>
+
+
+
+            <!-- Saut de ligne -->
+            <br />
+
+
+
+            <!-- Afficher une liste déroulante des pays déjà créés -->
+            <div class="form-group row">
+                <label for="txtPays" class="col-md-2">
+                    Liste des pays
+                </label>
+                <div class="col-md-3">
+                    <select id="selectPays" class="form-control" onchange="UpdateValue(this)">
+                        <option>
+
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+
+            <!-- L'utilisateur choisit un pays de la liste et le modifie -->
+            <div class="form-group row">
+
+                <label for="txtNewPays" class="col-md-2">
+                    Pays sélectionné
+                </label>
+
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="txtNewPays" name="txtNewPays">
+                </div>
+
+                <button id="btnModifier" class="btn btn-block btn-outline-primary col-md-2" onclick="ModifierPays()">
+                    Modifier le pays
+                </button>
+
+            </div>
+        </form>
+    </div>
+
+    <script src="./sources.js"></script>
+</body>
+
+</html>
